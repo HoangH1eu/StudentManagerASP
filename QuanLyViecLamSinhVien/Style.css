@@ -1,0 +1,331 @@
+﻿/* Toàn bộ trang */
+body {
+    font-family: 'Poppins', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f5f7;
+    color: #333;
+}
+
+/* Container chính */
+.container {
+    flex-direction: row;
+    height: 100vh;
+}
+
+/* Header */
+.header {
+    background: linear-gradient(90deg, #007BFF, #0056b3);
+    color: white;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+.content{
+    display:flex;
+}
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.user-info {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.username {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.logout {
+    background: none;
+    border: 2px solid white;
+    color: white;
+    cursor: pointer;
+    font-size: 14px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+    .logout:hover {
+        background-color: white;
+        color: #007BFF;
+    }
+
+/* Sidebar */
+.sidebar {
+    background: #222;
+    color: white;
+    width: 220px;
+    padding: 20px;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    position: sticky;
+    top: 0;
+    height: 100vh;
+}
+
+    .sidebar ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+        .sidebar ul li a {
+            color: white;
+            text-decoration: none;
+            padding: 12px;
+            display: block;
+            border-radius: 5px;
+            font-size: 14px;
+            transition: background 0.3s, transform 0.3s;
+        }
+
+            .sidebar ul li a:hover {
+                background: #444;
+                transform: translateX(5px);
+            }
+
+/* Main Content */
+.main-content {
+    flex: 1;
+    padding: 30px;
+    background: white;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 0.5s ease;
+}
+
+h2 {
+    color: #0056b3;
+    font-size: 28px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #007BFF;
+    padding-bottom: 10px;
+    display: inline-block;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Footer */
+.footer {
+    background: #222;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 14px;
+}
+
+/* Table styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+    table th, table td {
+        text-align: left;
+        padding: 12px;
+        border: none;
+        font-size: 14px;
+    }
+
+    table th {
+        background: #007BFF;
+        color: white;
+        text-transform: uppercase;
+    }
+
+    table tr:nth-child(even) {
+        background-color: #f9f9f9;
+    }
+
+    table tr:hover {
+        background-color: #eaeaea;
+        transition: background-color 0.3s;
+    }
+
+/* Form styles */
+.input-box, .dropdown {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+    box-sizing: border-box;
+    background: #f9f9f9;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+    .input-box:focus, .dropdown:focus {
+        border-color: #007BFF;
+        box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+        outline: none;
+    }
+
+.btn-primary {
+    background-color: #007BFF;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+    .btn-primary:hover {
+        background-color: #0056b3;
+        transform: scale(1.05);
+    }
+
+/* GridView styles */
+.grid-view {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+    .grid-view th, .grid-view td {
+        border: 1px solid #ddd;
+        padding: 8px;
+        text-align: left;
+    }
+
+    .grid-view th {
+        background-color: #007BFF;
+        font-weight: bold;
+    }
+
+    .grid-view tr:nth-child(even) {
+        background-color: #f9f9f9;
+    }
+
+    .grid-view tr:hover {
+        background-color: #f1f1f1;
+    }
+
+table {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    background: #fff;
+    border-collapse: collapse;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+    table tr {
+        border-bottom: 1px solid #ddd;
+    }
+
+    table td {
+        padding: 12px;
+        color: #333;
+        font-weight: bold;
+    }
+
+/* Input box */
+.input-box {
+    width: 500px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    transition: border-color 0.3s;
+}
+
+    .input-box:focus {
+        border-color: #3498db;
+        outline: none;
+        box-shadow: 0 0 5px rgba(52, 152, 219, 0.5);
+    }
+
+/* Dropdown */
+.dropdown {
+    width: 300px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    background-color: #f9f9f9;
+    transition: border-color 0.3s;
+}
+
+    .dropdown:focus {
+        border-color: #3498db;
+        outline: none;
+    }
+
+/* Button */
+.btn-primary {
+    width: 300px;
+    padding: 10px;
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+    .btn-primary:hover {
+        background-color: #2980b9;
+    }
+
+/* Thông báo */
+.message {
+    display: block;
+    margin-top: 20px;
+    text-align: center;
+    font-size: 14px;
+    color: green;
+}
+
+
+.btn-secondary {
+    background-color: #7f8c8d;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+    .btn-secondary:hover {
+        background-color: #34495e;
+    }
+

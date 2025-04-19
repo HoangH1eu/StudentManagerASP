@@ -1,0 +1,50 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MasterBase.master.cs" Inherits="QuanLyViecLamSinhVien.MasterBase" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+
+   <title><asp:ContentPlaceHolder ID="PageTitle" runat="server" /></title>
+    <link href="Style.css" rel="stylesheet" />
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+           <div class="container">
+            <!-- Header -->
+            <header class="header">
+                <div class="logo">Quản Lý Sinh Viên</div>
+                <div class="user-info">
+                    <asp:Label ID="lblUserName" runat="server" CssClass="username"></asp:Label>
+                    <asp:LinkButton ID="btnLogout" runat="server" CssClass="logout" OnClick="btnLogout_Click">Đăng xuất</asp:LinkButton>
+                </div>
+            </header>
+            <div class="content">
+            <!-- Sidebar -->
+            <nav class="sidebar">
+                <ul>
+                    <asp:ContentPlaceHolder ID="SidebarContent" runat="server">
+                        <!-- Menu động tuỳ thuộc vào vai trò -->
+                    </asp:ContentPlaceHolder>
+                </ul>
+            </nav>
+
+            <!-- Main Content -->
+            <main class="main-content">
+                <asp:ContentPlaceHolder ID="MainContent" runat="server">
+                    <!-- Nội dung chính sẽ được load ở đây -->
+                </asp:ContentPlaceHolder>
+            </main>
+
+            </div>
+
+            <!-- Footer -->
+            <footer class="footer">
+                 Hệ thống quản lý việc làm của sinh viên sau khi ra trường 
+            </footer>
+        </div>
+        </div>
+    </form>
+</body>
+</html>
